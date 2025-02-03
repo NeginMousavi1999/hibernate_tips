@@ -1,4 +1,4 @@
-package ir.cherry.hibernate.data.controller;
+package ir.cherry.hibernate.controller;
 
 import ir.cherry.hibernate.data.entity.*;
 import ir.cherry.hibernate.data.repository.CourseRepository;
