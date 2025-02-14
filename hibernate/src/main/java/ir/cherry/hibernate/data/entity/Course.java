@@ -1,6 +1,7 @@
 package ir.cherry.hibernate.data.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,10 +15,7 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
-public class Course {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Course extends BaseEntity {
 
     private String name;
 

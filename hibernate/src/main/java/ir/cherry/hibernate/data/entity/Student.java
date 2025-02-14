@@ -14,10 +14,7 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
-public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Student extends BaseEntity {
 
     private String name;
 

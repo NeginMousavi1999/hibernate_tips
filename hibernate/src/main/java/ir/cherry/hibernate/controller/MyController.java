@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author : Negin Mousavi - 2/2/2025, Sunday
  **/
@@ -32,7 +34,8 @@ public class MyController {
                 new StudentDetailsInfo(
                         negin,
                         "تهران تهران",
-                        "1377/12/08"
+                        "1377/12/08",
+                        List.of(20, 22, 6, 8)
                 )
         );
         negin = studentRepository.saveAndFlush(
