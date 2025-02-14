@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 /**
  * @author : Negin Mousavi - 2/3/2025, Monday
  **/
@@ -29,9 +31,15 @@ public class StudentDetailsInfo {
 
     String birthDate;
 
-    public StudentDetailsInfo(Student student, String address, String birthDate) {
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "student_fav_numbers")
+    @Column(name = "number")
+    List<Integer> favNumbers;
+
+    public StudentDetailsInfo(Student student, String address, String birthDate, List<Integer> favNumbers) {
         this.student = student;
         this.address = address;
         this.birthDate = birthDate;
+        this.favNumbers = favNumbers;
     }
 }
